@@ -1,0 +1,9 @@
+{
+  "name": "Classic Car Legends",
+  "description": "Premium vintage automobile lifestyle and collector platform.",
+  "repository": "https://github.com/your-org/classic-car-legends",
+  "keywords": ["react", "vite", "tailwind", "classic-cars"],
+  "stack": "heroku-22",
+  "buildpacks": [{ "url": "heroku/nodejs" }],
+  "env": { "NODE_ENV": { "value": "production" } }
+}
