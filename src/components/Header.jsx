@@ -26,10 +26,12 @@ export default function Header() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  const solid = scrolled || pathname !== '/';
+
   return (
     <motion.header
       initial={{ y: -80 }} animate={{ y: 0 }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all ${scrolled ? 'bg-cream/90 backdrop-blur-md shadow-md' : 'bg-transparent'}`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all ${solid ? 'bg-cream/95 backdrop-blur-md shadow-md' : 'bg-transparent'}`}
     >
       <nav className="container-x flex items-center justify-between px-5 md:px-8 py-4">
         <Link to="/" onClick={() => trackEvent('nav_click', { item: 'logo' })} className="flex items-center gap-2 font-serif text-2xl font-extrabold tracking-tight">
